@@ -1,0 +1,219 @@
+[gd_scene load_steps=16 format=3 uid="uid://pvgknhmimmpj"]
+
+[ext_resource type="Texture2D" uid="uid://fvxo7r50lyy" path="res://assets/UI assets pack 2/UI books & more.png" id="1_jfien"]
+[ext_resource type="Script" uid="uid://bkbdbe88cvcwu" path="res://scenes/main_menu.gd" id="1_yb5uv"]
+[ext_resource type="Texture2D" uid="uid://dhrcwy6xioh82" path="res://assets/UI assets pack 2/B1010.png" id="2_5d5v2"]
+[ext_resource type="Texture2D" uid="uid://cficxk7mxgb2c" path="res://assets/UI assets pack 2/C2012.png" id="3_v0qjw"]
+[ext_resource type="FontFile" uid="uid://b4tr5xqnbv6pp" path="res://assets/February Strawberry Freebie/Pixel MIM Strawberry.ttf" id="3_yb5uv"]
+[ext_resource type="Texture2D" uid="uid://di3tbw4ujvds8" path="res://assets/UI assets pack 2/C2013.png" id="4_7260r"]
+[ext_resource type="Texture2D" uid="uid://bpfsqboy5pghs" path="res://assets/UI assets pack 2/C2011.png" id="5_l3124"]
+[ext_resource type="Texture2D" uid="uid://c730iqfk8t1xh" path="res://assets/UI assets pack 2/background_4.png" id="6_ecnfn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8c6n"]
+texture = ExtResource("2_5d5v2")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(-1, -2, 519, 263)
+modulate_color = Color(0.72255445, 0.7225545, 0.7225545, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kiw3d"]
+texture = ExtResource("3_v0qjw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wqjl"]
+texture = ExtResource("4_7260r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73mli"]
+texture = ExtResource("5_l3124")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_skpiv"]
+texture = ExtResource("6_ecnfn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2rfe"]
+texture = ExtResource("1_jfien")
+region_rect = Rect2(17, 336, 30, 16)
+modulate_color = Color(0.8734676, 0.75419456, 0.6402606, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5uv"]
+texture = ExtResource("1_jfien")
+region_rect = Rect2(17, 336, 30, 16)
+modulate_color = Color(0.52312034, 0.5231203, 0.5231203, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yb5uv")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_h8c6n")
+
+[node name="Cloud3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 166.0
+offset_right = 1343.0
+offset_bottom = 437.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_kiw3d")
+
+[node name="Cloud2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -174.0
+offset_top = 144.0
+offset_right = 373.0
+offset_bottom = 399.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8wqjl")
+
+[node name="Cloud1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 126.0
+offset_top = -409.0
+offset_right = 657.0
+offset_bottom = -124.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_73mli")
+
+[node name="Stars" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 3.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_skpiv")
+
+[node name="MainButtons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.966
+anchor_right = 0.5
+anchor_bottom = 0.966
+offset_left = -145.0
+offset_top = -385.96802
+offset_right = 149.25
+offset_bottom = -4.9680176
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Button2" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
+theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")
+text = "StartGame"
+
+[node name="Button3" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
+theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")
+text = "Options"
+
+[node name="Button" type="Button" parent="MainButtons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
+theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -313.0
+offset_top = 99.0
+offset_right = 325.0
+offset_bottom = 223.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 13
+theme_override_fonts/font = ExtResource("3_yb5uv")
+theme_override_font_sizes/font_size = 74
+text = "Doll House Sectets"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -276.5
+offset_top = -425.0
+offset_right = 276.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Options"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -278.5
+offset_right = 278.5
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 31
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 131.5
+offset_top = 276.0
+offset_right = 425.5
+offset_bottom = 399.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
+theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")
+text = "Back
+"
+
+[connection signal="pressed" from="MainButtons/Button2" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="MainButtons/Button3" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MainButtons/Button" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_back_Options_pressed"]

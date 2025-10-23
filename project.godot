@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dollhouse Secrets"
-run/main_scene="uid://hc5n3u2kvie"
+run/main_scene="uid://pvgknhmimmpj"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
