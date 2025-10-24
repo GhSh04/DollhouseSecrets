@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2ctaaqxxd4w1"]
+
+[ext_resource type="Texture2D" uid="uid://dxfkfe5wrhfxf" path="res://Bedroom/WhatsApp Image 2025-10-24 at 2.56.34 PM.jpeg" id="1_6huu2"]
+[ext_resource type="Script" uid="uid://c1110mrt8s78o" path="res://Bedroom/area_2d.gd" id="2_7we20"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_crq52"]
+radius = 27.0
+height = 80.0
+
+[node name="mirror" type="Node2D"]
+
+[node name="WhatsAppImage20251024At2_56_34Pm" type="Sprite2D" parent="."]
+position = Vector2(362.25, 322.25003)
+scale = Vector2(0.69580084, 0.628418)
+texture = ExtResource("1_6huu2")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_7we20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(50, 336)
+rotation = -1.5696363
+shape = SubResource("CapsuleShape2D_crq52")

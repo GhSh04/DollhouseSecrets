@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://c88lavhutdnnr"]
+
+[ext_resource type="Texture2D" uid="uid://dr6uvo06unifx" path="res://assets/Bedroom.png" id="1_ljr60"]
+[ext_resource type="Texture2D" uid="uid://cuocdaiebm78w" path="res://Bedroom/Inside_C.png" id="2_t561b"]
+[ext_resource type="PackedScene" uid="uid://fpk4mg5ryf46" path="res://scenes/MainPlayer.tscn" id="3_5vh5m"]
+[ext_resource type="Script" uid="uid://c1110mrt8s78o" path="res://Bedroom/area_2d.gd" id="4_vpxbp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1efo"]
+radius = 163.47783
+
+[node name="Bedroom" type="Node2D"]
+
+[node name="Bedroom" type="Sprite2D" parent="."]
+position = Vector2(1058, 621)
+scale = Vector2(1.3723958, 1.2167969)
+texture = ExtResource("1_ljr60")
+
+[node name="InsideC" type="Sprite2D" parent="."]
+position = Vector2(1036.5, 1341.25)
+scale = Vector2(8.649123, 3.836537)
+texture = ExtResource("2_t561b")
+
+[node name="InsideC2" type="Sprite2D" parent="."]
+position = Vector2(2192.4187, 621.284)
+rotation = 1.5696069
+scale = Vector2(4.3584456, 3.0155087)
+texture = ExtResource("2_t561b")
+
+[node name="InsideC3" type="Sprite2D" parent="."]
+position = Vector2(-81.54797, 550.39453)
+rotation = -1.5676023
+scale = Vector2(4.8821645, 3.6139145)
+texture = ExtResource("2_t561b")
+
+[node name="InsideC4" type="Sprite2D" parent="."]
+position = Vector2(1140, -73.5)
+scale = Vector2(7.957895, 2.9038463)
+texture = ExtResource("2_t561b")
+
+[node name="player" parent="." instance=ExtResource("3_5vh5m")]
+position = Vector2(679, 1063)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_vpxbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1763, 340)
+shape = SubResource("CircleShape2D_o1efo")
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
