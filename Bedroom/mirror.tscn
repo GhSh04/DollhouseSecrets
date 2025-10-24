@@ -21,3 +21,10 @@ script = ExtResource("2_7we20")
 position = Vector2(50, 336)
 rotation = -1.5696363
 shape = SubResource("CapsuleShape2D_crq52")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 10.0
+offset_top = 316.0
+offset_right = 88.0
+offset_bottom = 360.0
+text = "Back"
