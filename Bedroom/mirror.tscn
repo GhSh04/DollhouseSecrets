@@ -1,30 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2ctaaqxxd4w1"]
+[gd_scene load_steps=10 format=3 uid="uid://d2ctaaqxxd4w1"]
 
-[ext_resource type="Texture2D" uid="uid://dxfkfe5wrhfxf" path="res://Bedroom/WhatsApp Image 2025-10-24 at 2.56.34 PM.jpeg" id="1_6huu2"]
 [ext_resource type="Script" uid="uid://c1110mrt8s78o" path="res://Bedroom/area_2d.gd" id="2_7we20"]
+[ext_resource type="FontFile" uid="uid://b4tr5xqnbv6pp" path="res://assets/February Strawberry Freebie/Pixel MIM Strawberry.ttf" id="3_6xsca"]
+[ext_resource type="Texture2D" uid="uid://bu65mvhu65hk1" path="res://Bedroom/UI books & more.png" id="3_crq52"]
+[ext_resource type="Texture2D" uid="uid://b1xa6kiv47pfk" path="res://Bedroom/Copilot_20251024_232837.png" id="3_t6ou2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_crq52"]
-radius = 27.0
-height = 80.0
+radius = 40.99768
+height = 186.0509
+
+[sub_resource type="FontVariation" id="FontVariation_pd3tr"]
+base_font = ExtResource("3_6xsca")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6ou2"]
+texture = ExtResource("3_crq52")
+modulate_color = Color(0.6736995, 0.5535543, 0.36230916, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xsca"]
+texture = ExtResource("3_crq52")
+modulate_color = Color(0.49747366, 0.49747366, 0.49747366, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pd3tr"]
+texture = ExtResource("3_crq52")
+modulate_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
 
 [node name="mirror" type="Node2D"]
 
-[node name="WhatsAppImage20251024At2_56_34Pm" type="Sprite2D" parent="."]
-position = Vector2(362.25, 322.25003)
-scale = Vector2(0.69580084, 0.628418)
-texture = ExtResource("1_6huu2")
+[node name="Copilot20251024232837" type="Sprite2D" parent="."]
+position = Vector2(1154, 612.50006)
+scale = Vector2(1.5026041, 1.1962892)
+texture = ExtResource("3_t6ou2")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_7we20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(50, 336)
+position = Vector2(131, 673)
 rotation = -1.5696363
 shape = SubResource("CapsuleShape2D_crq52")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 10.0
-offset_top = 316.0
-offset_right = 88.0
-offset_bottom = 360.0
+offset_left = 22.0
+offset_top = 607.0
+offset_right = 254.0
+offset_bottom = 742.0
+theme_override_colors/font_color = Color(1, 0.89827347, 0.8123662, 1)
+theme_override_fonts/font = SubResource("FontVariation_pd3tr")
+theme_override_font_sizes/font_size = 74
+theme_override_styles/normal = SubResource("StyleBoxTexture_t6ou2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6xsca")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pd3tr")
 text = "Back"

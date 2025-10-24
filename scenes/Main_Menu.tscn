@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://pvgknhmimmpj"]
+[gd_scene load_steps=19 format=3 uid="uid://pvgknhmimmpj"]
 
 [ext_resource type="Texture2D" uid="uid://fvxo7r50lyy" path="res://assets/UI assets pack 2/UI books & more.png" id="1_jfien"]
 [ext_resource type="Script" uid="uid://bkbdbe88cvcwu" path="res://scenes/main_menu.gd" id="1_yb5uv"]
@@ -30,6 +30,9 @@ texture = ExtResource("5_l3124")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_skpiv"]
 texture = ExtResource("6_ecnfn")
 
+[sub_resource type="FontVariation" id="FontVariation_5d5v2"]
+base_font = ExtResource("3_yb5uv")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2rfe"]
 texture = ExtResource("1_jfien")
 region_rect = Rect2(17, 336, 30, 16)
@@ -39,6 +42,12 @@ modulate_color = Color(0.8734676, 0.75419456, 0.6402606, 1)
 texture = ExtResource("1_jfien")
 region_rect = Rect2(17, 336, 30, 16)
 modulate_color = Color(0.52312034, 0.5231203, 0.5231203, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_v0qjw"]
+base_font = ExtResource("3_yb5uv")
+
+[sub_resource type="FontVariation" id="FontVariation_7260r"]
+base_font = ExtResource("3_yb5uv")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -120,7 +129,8 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
 theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
-theme_override_font_sizes/font_size = 37
+theme_override_fonts/font = SubResource("FontVariation_5d5v2")
+theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")
@@ -132,7 +142,8 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
 theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
-theme_override_font_sizes/font_size = 37
+theme_override_fonts/font = SubResource("FontVariation_v0qjw")
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")
@@ -206,7 +217,8 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.4915833, 0.49158323, 0.49158323, 1)
 theme_override_colors/font_hover_color = Color(0.3384729, 0.3384729, 0.33847287, 1)
-theme_override_font_sizes/font_size = 37
+theme_override_fonts/font = SubResource("FontVariation_7260r")
+theme_override_font_sizes/font_size = 62
 theme_override_styles/normal = SubResource("StyleBoxTexture_y2rfe")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yb5uv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_yb5uv")

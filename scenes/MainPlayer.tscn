@@ -65,6 +65,6 @@ shape = SubResource("CircleShape2D_smehm")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
-limit_right = 1500
-limit_bottom = 750
+limit_right = 2300
+limit_bottom = 1225
 editor_draw_limits = true
