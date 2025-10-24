@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlf841iw3412b"]
+
+[ext_resource type="Texture2D" uid="uid://d3gk7g7gv1lff" path="res://Bedroom/Copilot_20251024_231805.png" id="1_ut8ew"]
+
+[node name="chair" type="Node2D"]
+
+[node name="Copilot20251024231805" type="Sprite2D" parent="."]
+position = Vector2(1150.9999, 627.00006)
+scale = Vector2(1.4973959, 1.2246095)
+texture = ExtResource("1_ut8ew")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddlsfw44e1x1q"]
 
-[ext_resource type="Texture2D" uid="uid://cgm2fdqksoybb" path="res://Bedroom/WhatsApp Image 2025-10-24 at 2.36.03 PM.jpeg" id="1_7xo37"]
+[ext_resource type="Texture2D" uid="uid://bmoo2rwcjehai" path="res://Bedroom/Copilot_20251024_234914.png" id="1_7xo37"]
 
 [node name="bed" type="Node2D"]
 
-[node name="WhatsAppImage20251024At2_36_03Pm" type="Sprite2D" parent="."]
-position = Vector2(576.25, 373.24997)
-scale = Vector2(1.1186523, 0.7241211)
+[node name="Copilot20251024234914" type="Sprite2D" parent="."]
+position = Vector2(1150.2499, 613.00006)
+scale = Vector2(1.4977212, 1.1953126)
 texture = ExtResource("1_7xo37")
