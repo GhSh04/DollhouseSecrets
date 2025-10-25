@@ -16,7 +16,7 @@ func _ready():
 	options.visible = false
 
 func _on_Start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://Bedroom/bedroom.tscn")
 
 
 func _on_Options_pressed() -> void:

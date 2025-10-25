@@ -5,6 +5,6 @@
 [node name="bed" type="Node2D"]
 
 [node name="Copilot20251024234914" type="Sprite2D" parent="."]
-position = Vector2(1150.2499, 613.00006)
-scale = Vector2(1.4977212, 1.1953126)
+position = Vector2(576.4375, 322)
+scale = Vector2(0.7468262, 0.6328125)
 texture = ExtResource("1_7xo37")

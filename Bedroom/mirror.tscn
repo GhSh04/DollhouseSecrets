@@ -1,15 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2ctaaqxxd4w1"]
+[gd_scene load_steps=13 format=3 uid="uid://d2ctaaqxxd4w1"]
 
 [ext_resource type="Texture2D" uid="uid://qqgp1s24sl40" path="res://Bedroom/download (1).jpg" id="1_pd3tr"]
-[ext_resource type="Script" uid="uid://c1110mrt8s78o" path="res://Bedroom/area_2d.gd" id="2_7we20"]
 [ext_resource type="FontFile" uid="uid://b4tr5xqnbv6pp" path="res://assets/February Strawberry Freebie/Pixel MIM Strawberry.ttf" id="3_6xsca"]
 [ext_resource type="Texture2D" uid="uid://bu65mvhu65hk1" path="res://Bedroom/UI books & more.png" id="3_crq52"]
 [ext_resource type="Texture2D" uid="uid://b1xa6kiv47pfk" path="res://Bedroom/Copilot_20251024_232837.png" id="3_t6ou2"]
 [ext_resource type="Texture2D" uid="uid://cuocdaiebm78w" path="res://Bedroom/Inside_C.png" id="6_4xfiu"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_crq52"]
-radius = 40.99768
-height = 186.0509
+[ext_resource type="Script" uid="uid://c646kjktssxok" path="res://Bedroom/111.gd" id="6_pd3tr"]
 
 [sub_resource type="FontVariation" id="FontVariation_pd3tr"]
 base_font = ExtResource("3_6xsca")
@@ -26,31 +22,28 @@ modulate_color = Color(0.49747366, 0.49747366, 0.49747366, 1)
 texture = ExtResource("3_crq52")
 modulate_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4xfiu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rlkg"]
+size = Vector2(207, 114)
+
 [node name="mirror" type="Node2D"]
 
 [node name="Download(1)" type="Sprite2D" parent="."]
-position = Vector2(1137, 949.0626)
+position = Vector2(1163.0001, 898)
 scale = Vector2(4.8247285, 5.396894)
 texture = ExtResource("1_pd3tr")
 
 [node name="Copilot20251024232837" type="Sprite2D" parent="."]
-position = Vector2(1154, 820.5)
-scale = Vector2(1.5026041, 1.6025391)
+position = Vector2(574.00006, 325.50003)
+scale = Vector2(0.7473958, 0.63574225)
 texture = ExtResource("3_t6ou2")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_7we20")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(124.000015, 859.00006)
-rotation = -1.5696363
-shape = SubResource("CapsuleShape2D_crq52")
-
 [node name="Button" type="Button" parent="."]
-offset_left = 5.0
-offset_top = 801.0
-offset_right = 237.0
-offset_bottom = 936.0
+offset_left = 19.0
+offset_top = 223.0
+offset_right = 179.0
+offset_bottom = 314.0
 theme_override_colors/font_color = Color(1, 0.89827347, 0.8123662, 1)
 theme_override_fonts/font = SubResource("FontVariation_pd3tr")
 theme_override_font_sizes/font_size = 74
@@ -60,24 +53,35 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_pd3tr")
 text = "Back"
 
 [node name="InsideC" type="Sprite2D" parent="."]
-position = Vector2(1137, 1731)
+position = Vector2(623.99994, 744.00006)
 rotation = 3.1402822
 scale = Vector2(9.119299, 3.5769231)
 texture = ExtResource("6_4xfiu")
 
 [node name="InsideC2" type="Sprite2D" parent="."]
-position = Vector2(1139.0001, -87)
-scale = Vector2(9.119299, 3.5769231)
+position = Vector2(494.25, -87)
+scale = Vector2(4.594737, 3.5769231)
 texture = ExtResource("6_4xfiu")
 
 [node name="InsideC3" type="Sprite2D" parent="."]
-position = Vector2(-75.7534, 828.62506)
+position = Vector2(-69.9376, 338.8867)
 rotation = -1.5671501
-scale = Vector2(5.794411, 2.9772067)
+scale = Vector2(2.360962, 2.9772067)
 texture = ExtResource("6_4xfiu")
 
 [node name="InsideC4" type="Sprite2D" parent="."]
-position = Vector2(2376.1438, 818.16077)
+position = Vector2(1214.7161, 229.8718)
 rotation = -4.7130985
-scale = Vector2(5.7465744, 2.6280673)
+scale = Vector2(2.9386556, 2.6280673)
 texture = ExtResource("6_4xfiu")
+
+[node name="111" type="Area2D" parent="."]
+script = ExtResource("6_pd3tr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="111"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_4xfiu")
+position = Vector2(106.5, 370)
+shape = SubResource("RectangleShape2D_5rlkg")
+
+[connection signal="input_event" from="111" to="111" method="_on_input_event"]

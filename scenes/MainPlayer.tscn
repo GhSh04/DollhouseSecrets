@@ -1,70 +1,105 @@
-[gd_scene load_steps=9 format=3 uid="uid://fpk4mg5ryf46"]
+[gd_scene load_steps=14 format=3 uid="uid://fpk4mg5ryf46"]
 
-[ext_resource type="Texture2D" uid="uid://cjxn4cifi8mxh" path="res://assets/sprite_walking_8dce25ce-ee9b-44d5-a2c1-adbf1b2c9822_bbe44c35-382f-43c4-93f0-238fdfadb202-Photoroom.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://vmxonud0xlep" path="res://scenes/main_player.gd" id="1_xsm63"]
+[ext_resource type="Texture2D" uid="uid://8icjoq18wp27" path="res://assets/WhatsApp Image 2025-10-25 at 5.48.59 PM.png" id="2_oq4ni"]
+[ext_resource type="Texture2D" uid="uid://dc2prd5d57i42" path="res://assets/Copilot_20251025_155951.png" id="2_ydk1y"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(0, 0, 313, 186)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqunt"]
+atlas = ExtResource("2_oq4ni")
+region = Rect2(0, 0, 320, 853)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(313, 0, 313, 186)
+[sub_resource type="AtlasTexture" id="AtlasTexture_11llm"]
+atlas = ExtResource("2_oq4ni")
+region = Rect2(320, 0, 320, 853)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(626, 0, 313, 186)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yervt"]
+atlas = ExtResource("2_oq4ni")
+region = Rect2(640, 0, 320, 853)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(939, 0, 313, 186)
+[sub_resource type="AtlasTexture" id="AtlasTexture_su5v1"]
+atlas = ExtResource("2_oq4ni")
+region = Rect2(960, 0, 320, 853)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("1_3vyb7")
-region = Rect2(0, 186, 313, 186)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyh2l"]
+atlas = ExtResource("2_ydk1y")
+region = Rect2(0, 0, 256, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j87hv"]
+atlas = ExtResource("2_ydk1y")
+region = Rect2(256, 0, 256, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrxe1"]
+atlas = ExtResource("2_ydk1y")
+region = Rect2(512, 0, 256, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m47q"]
+atlas = ExtResource("2_ydk1y")
+region = Rect2(768, 0, 256, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g2els")
+"texture": SubResource("AtlasTexture_bqunt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqgy")
+"texture": SubResource("AtlasTexture_11llm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dqkch")
+"texture": SubResource("AtlasTexture_yervt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qlg0r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
+"texture": SubResource("AtlasTexture_su5v1")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"d",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyh2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j87hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrxe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m47q")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"w",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_smehm"]
-radius = 57.245087
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7wx2"]
+size = Vector2(227, 408)
 
 [node name="player" type="CharacterBody2D"]
+script = ExtResource("1_xsm63")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(46.00003, -213)
-scale = Vector2(4.4792333, 4.5752697)
+position = Vector2(281.5, 361.25)
+scale = Vector2(0.7734375, 0.7262896)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"walk"
-frame = 1
-frame_progress = 0.5370394
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(51, -135)
-shape = SubResource("CircleShape2D_smehm")
+animation = &"w"
+frame_progress = 0.7343811
 
 [node name="Camera2D" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-limit_right = 2300
-limit_bottom = 1225
+position = Vector2(200, 187)
+limit_left = -33
+limit_top = -77
+limit_right = 7000
+limit_bottom = 1623
+position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(301.5, 362)
+shape = SubResource("RectangleShape2D_m7wx2")
