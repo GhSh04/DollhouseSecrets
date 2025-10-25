@@ -1,10 +1,71 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlf841iw3412b"]
+[gd_scene load_steps=10 format=3 uid="uid://dlf841iw3412b"]
 
+[ext_resource type="Texture2D" uid="uid://qqgp1s24sl40" path="res://Bedroom/download (1).jpg" id="1_quung"]
 [ext_resource type="Texture2D" uid="uid://d3gk7g7gv1lff" path="res://Bedroom/Copilot_20251024_231805.png" id="1_ut8ew"]
+[ext_resource type="Texture2D" uid="uid://cuocdaiebm78w" path="res://Bedroom/Inside_C.png" id="3_myshv"]
+[ext_resource type="FontFile" uid="uid://b4tr5xqnbv6pp" path="res://assets/February Strawberry Freebie/Pixel MIM Strawberry.ttf" id="4_2py4c"]
+[ext_resource type="Texture2D" uid="uid://bu65mvhu65hk1" path="res://Bedroom/UI books & more.png" id="5_hrxmm"]
+
+[sub_resource type="FontVariation" id="FontVariation_lk8w7"]
+base_font = ExtResource("4_2py4c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6lth"]
+texture = ExtResource("5_hrxmm")
+modulate_color = Color(0.6736995, 0.5535543, 0.36230916, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ca0br"]
+texture = ExtResource("5_hrxmm")
+modulate_color = Color(0.49747366, 0.49747366, 0.49747366, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4mh3"]
+texture = ExtResource("5_hrxmm")
+modulate_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
 
 [node name="chair" type="Node2D"]
 
+[node name="Download(1)" type="Sprite2D" parent="."]
+position = Vector2(1206.0001, 706)
+scale = Vector2(5.482337, 5.389002)
+texture = ExtResource("1_quung")
+
 [node name="Copilot20251024231805" type="Sprite2D" parent="."]
-position = Vector2(1150.9999, 627.00006)
-scale = Vector2(1.4973959, 1.2246095)
+position = Vector2(1150.4999, 819.49994)
+scale = Vector2(1.4980468, 1.6005859)
 texture = ExtResource("1_ut8ew")
+
+[node name="InsideC" type="Sprite2D" parent="."]
+position = Vector2(1153.8645, 1719.9797)
+rotation = 3.1386054
+scale = Vector2(9.147787, 3.1923077)
+texture = ExtResource("3_myshv")
+
+[node name="InsideC3" type="Sprite2D" parent="."]
+position = Vector2(1148.7615, -83.030235)
+rotation = 0.0008832873
+scale = Vector2(9.079584, 3.1923077)
+texture = ExtResource("3_myshv")
+
+[node name="InsideC2" type="Sprite2D" parent="."]
+position = Vector2(-72.52954, 816.3048)
+rotation = -1.5694504
+scale = Vector2(5.767588, 2.8324683)
+texture = ExtResource("3_myshv")
+
+[node name="InsideC4" type="Sprite2D" parent="."]
+position = Vector2(2375.5688, 817.9332)
+rotation = 1.5678476
+scale = Vector2(5.783218, 2.8324683)
+texture = ExtResource("3_myshv")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 20.0
+offset_top = 758.0
+offset_right = 252.0
+offset_bottom = 893.0
+theme_override_colors/font_color = Color(1, 0.89827347, 0.8123662, 1)
+theme_override_fonts/font = SubResource("FontVariation_lk8w7")
+theme_override_font_sizes/font_size = 74
+theme_override_styles/normal = SubResource("StyleBoxTexture_i6lth")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ca0br")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c4mh3")
+text = "Back"

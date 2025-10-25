@@ -20,3 +20,7 @@ func _on_input_event(viewport, event, shape_idx):
 
 func _on_area_2d_2_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	pass # Replace with function body.
+
+
+func _on_area_2d_4_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.
