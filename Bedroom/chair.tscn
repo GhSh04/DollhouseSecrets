@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlf841iw3412b"]
+[gd_scene load_steps=7 format=3 uid="uid://dlf841iw3412b"]
 
 [ext_resource type="Script" uid="uid://dvhj8cgp1n8yq" path="res://Bedroom/chair.gd" id="1_2py4c"]
 [ext_resource type="Texture2D" uid="uid://qqgp1s24sl40" path="res://Bedroom/download (1).jpg" id="1_quung"]
 [ext_resource type="Texture2D" uid="uid://d3gk7g7gv1lff" path="res://Bedroom/Copilot_20251024_231805.png" id="1_ut8ew"]
 [ext_resource type="Texture2D" uid="uid://cuocdaiebm78w" path="res://Bedroom/Inside_C.png" id="3_myshv"]
+[ext_resource type="Script" uid="uid://c1110mrt8s78o" path="res://Bedroom/333.gd" id="5_quung"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myshv"]
+size = Vector2(99, 391)
 
 [node name="chair" type="Node2D"]
 script = ExtResource("1_2py4c")
@@ -42,24 +46,11 @@ rotation = 1.5678476
 scale = Vector2(2.904969, 2.8324683)
 texture = ExtResource("3_myshv")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="333" type="Area2D" parent="."]
+script = ExtResource("5_quung")
 
-[node name="BackButton" type="Button" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 2.7500002
-anchor_top = 9.075001
-anchor_right = 2.7500002
-anchor_bottom = 9.075001
-offset_left = -99.00001
-offset_top = -60.00003
-offset_right = 98.99999
-offset_bottom = 59.99997
+[node name="CollisionShape2D" type="CollisionShape2D" parent="333"]
+position = Vector2(39.5, 350.5)
+shape = SubResource("RectangleShape2D_myshv")
 
-[connection signal="focus_exited" from="Control/BackButton" to="." method="_on_back_button_focus_exited"]
-[connection signal="mouse_exited" from="Control/BackButton" to="." method="_on_back_button_mouse_exited"]
-[connection signal="pressed" from="Control/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="input_event" from="333" to="333" method="_on_input_event"]

@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://fpk4mg5ryf46"]
+[gd_scene load_steps=21 format=3 uid="uid://fpk4mg5ryf46"]
 
 [ext_resource type="Script" uid="uid://vmxonud0xlep" path="res://scenes/main_player.gd" id="1_xsm63"]
+[ext_resource type="Resource" uid="uid://bkejl277cbon7" path="res://inventory/playerinv.tres" id="2_j87hv"]
 [ext_resource type="Texture2D" uid="uid://dc2prd5d57i42" path="res://assets/player/Copilot_20251025_155951.png" id="2_ydk1y"]
 [ext_resource type="Texture2D" uid="uid://b0boij1iackx2" path="res://assets/player/IMG_7452.png" id="3_oq4ni"]
 [ext_resource type="Texture2D" uid="uid://b4fwco7c3hv6x" path="res://assets/player/IMG_7454.png" id="3_vyh2l"]
+[ext_resource type="PackedScene" uid="uid://blw1gq653yk4a" path="res://inventory/inv_ui.tscn" id="6_yrxe1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oq4ni"]
 atlas = ExtResource("3_vyh2l")
@@ -112,22 +114,25 @@ size = Vector2(159.5, 293.375)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_xsm63")
+inv = ExtResource("2_j87hv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(349.88477, 421.04285)
-scale = Vector2(0.5487344, 0.5382264)
+scale = Vector2(0.6, 0.588)
 sprite_frames = SubResource("SpriteFrames_fjrip")
 animation = &"down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(200, 187)
-limit_left = -33
-limit_top = -77
-limit_right = 7000
-limit_bottom = 1623
+position = Vector2(218, 282)
+limit_left = 2
+limit_top = -1
+limit_right = 7035
+limit_bottom = 1712
 position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(347.75, 419.6875)
 shape = SubResource("RectangleShape2D_m7wx2")
+
+[node name="Inv_UI" parent="." instance=ExtResource("6_yrxe1")]

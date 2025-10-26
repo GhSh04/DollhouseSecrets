@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://c76pdx2i4bhvw"]
+
+[ext_resource type="Script" uid="uid://tawa48kpcybm" path="res://inventory/inventory_item.gd" id="1_y2klj"]
+[ext_resource type="Texture2D" uid="uid://dqtcpare7tu3k" path="res://assets/UI assets pack 2/WhatsApp Image 2025-10-24 at 2.36.03 PM (2).png" id="2_e2gfd"]
+
+[resource]
+script = ExtResource("1_y2klj")
+name = "key"
+texture = ExtResource("2_e2gfd")
+metadata/_custom_type_script = "uid://tawa48kpcybm"

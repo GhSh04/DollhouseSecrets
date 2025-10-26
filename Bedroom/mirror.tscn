@@ -1,31 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://d2ctaaqxxd4w1"]
+[gd_scene load_steps=7 format=3 uid="uid://d2ctaaqxxd4w1"]
 
 [ext_resource type="Texture2D" uid="uid://qqgp1s24sl40" path="res://Bedroom/download (1).jpg" id="1_pd3tr"]
-[ext_resource type="FontFile" uid="uid://b4tr5xqnbv6pp" path="res://assets/February Strawberry Freebie/Pixel MIM Strawberry.ttf" id="3_6xsca"]
-[ext_resource type="Texture2D" uid="uid://bu65mvhu65hk1" path="res://Bedroom/UI books & more.png" id="3_crq52"]
 [ext_resource type="Texture2D" uid="uid://b1xa6kiv47pfk" path="res://Bedroom/Copilot_20251024_232837.png" id="3_t6ou2"]
 [ext_resource type="Texture2D" uid="uid://cuocdaiebm78w" path="res://Bedroom/Inside_C.png" id="6_4xfiu"]
 [ext_resource type="Script" uid="uid://c646kjktssxok" path="res://Bedroom/111.gd" id="6_pd3tr"]
 
-[sub_resource type="FontVariation" id="FontVariation_pd3tr"]
-base_font = ExtResource("3_6xsca")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6ou2"]
-texture = ExtResource("3_crq52")
-modulate_color = Color(0.6736995, 0.5535543, 0.36230916, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xsca"]
-texture = ExtResource("3_crq52")
-modulate_color = Color(0.49747366, 0.49747366, 0.49747366, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pd3tr"]
-texture = ExtResource("3_crq52")
-modulate_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4xfiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rlkg"]
-size = Vector2(207, 114)
+size = Vector2(146, 492)
 
 [node name="mirror" type="Node2D"]
 
@@ -38,19 +21,6 @@ texture = ExtResource("1_pd3tr")
 position = Vector2(574.00006, 325.50003)
 scale = Vector2(0.7473958, 0.63574225)
 texture = ExtResource("3_t6ou2")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 19.0
-offset_top = 223.0
-offset_right = 179.0
-offset_bottom = 314.0
-theme_override_colors/font_color = Color(1, 0.89827347, 0.8123662, 1)
-theme_override_fonts/font = SubResource("FontVariation_pd3tr")
-theme_override_font_sizes/font_size = 74
-theme_override_styles/normal = SubResource("StyleBoxTexture_t6ou2")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_6xsca")
-theme_override_styles/hover = SubResource("StyleBoxTexture_pd3tr")
-text = "Back"
 
 [node name="InsideC" type="Sprite2D" parent="."]
 position = Vector2(623.99994, 744.00006)
@@ -81,7 +51,7 @@ script = ExtResource("6_pd3tr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="111"]
 texture_filter = 1
 material = SubResource("ShaderMaterial_4xfiu")
-position = Vector2(106.5, 370)
+position = Vector2(76, 337)
 shape = SubResource("RectangleShape2D_5rlkg")
 
 [connection signal="input_event" from="111" to="111" method="_on_input_event"]

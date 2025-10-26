@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddlsfw44e1x1q"]
+[gd_scene load_steps=4 format=3 uid="uid://ddlsfw44e1x1q"]
 
 [ext_resource type="Texture2D" uid="uid://bmoo2rwcjehai" path="res://Bedroom/Copilot_20251024_234914.png" id="1_7xo37"]
+[ext_resource type="Script" uid="uid://hwuann0qn647" path="res://Bedroom/222.gd" id="2_awvsw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmign"]
+size = Vector2(132, 478)
 
 [node name="bed" type="Node2D"]
 
@@ -8,3 +12,12 @@
 position = Vector2(576.4375, 322)
 scale = Vector2(0.7468262, 0.6328125)
 texture = ExtResource("1_7xo37")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_awvsw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(69, 334)
+shape = SubResource("RectangleShape2D_bmign")
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
