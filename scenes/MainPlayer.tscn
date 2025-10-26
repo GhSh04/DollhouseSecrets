@@ -1,24 +1,25 @@
-[gd_scene load_steps=14 format=3 uid="uid://fpk4mg5ryf46"]
+[gd_scene load_steps=19 format=3 uid="uid://fpk4mg5ryf46"]
 
 [ext_resource type="Script" uid="uid://vmxonud0xlep" path="res://scenes/main_player.gd" id="1_xsm63"]
-[ext_resource type="Texture2D" uid="uid://8icjoq18wp27" path="res://assets/WhatsApp Image 2025-10-25 at 5.48.59 PM.png" id="2_oq4ni"]
-[ext_resource type="Texture2D" uid="uid://dc2prd5d57i42" path="res://assets/Copilot_20251025_155951.png" id="2_ydk1y"]
+[ext_resource type="Texture2D" uid="uid://dc2prd5d57i42" path="res://assets/player/Copilot_20251025_155951.png" id="2_ydk1y"]
+[ext_resource type="Texture2D" uid="uid://b0boij1iackx2" path="res://assets/player/IMG_7452.png" id="3_oq4ni"]
+[ext_resource type="Texture2D" uid="uid://b4fwco7c3hv6x" path="res://assets/player/IMG_7454.png" id="3_vyh2l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq4ni"]
+atlas = ExtResource("3_vyh2l")
+region = Rect2(876, 0, 292, 617)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqunt"]
-atlas = ExtResource("2_oq4ni")
-region = Rect2(0, 0, 320, 853)
+atlas = ExtResource("3_vyh2l")
+region = Rect2(584, 0, 292, 617)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11llm"]
-atlas = ExtResource("2_oq4ni")
-region = Rect2(320, 0, 320, 853)
+atlas = ExtResource("3_vyh2l")
+region = Rect2(292, 0, 292, 617)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yervt"]
-atlas = ExtResource("2_oq4ni")
-region = Rect2(640, 0, 320, 853)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_su5v1"]
-atlas = ExtResource("2_oq4ni")
-region = Rect2(960, 0, 320, 853)
+atlas = ExtResource("3_vyh2l")
+region = Rect2(0, 0, 292, 617)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vyh2l"]
 atlas = ExtResource("2_ydk1y")
@@ -36,9 +37,28 @@ region = Rect2(512, 0, 256, 500)
 atlas = ExtResource("2_ydk1y")
 region = Rect2(768, 0, 256, 500)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbg0t"]
+atlas = ExtResource("3_oq4ni")
+region = Rect2(878, 0, 292, 736)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbsqg"]
+atlas = ExtResource("3_oq4ni")
+region = Rect2(586, 0, 292, 736)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lu3o"]
+atlas = ExtResource("3_oq4ni")
+region = Rect2(294, 0, 292, 736)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_regva"]
+atlas = ExtResource("3_oq4ni")
+region = Rect2(2, 0, 292, 736)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq4ni")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bqunt")
 }, {
@@ -47,12 +67,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yervt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_su5v1")
 }],
 "loop": true,
-"name": &"d",
+"name": &"down",
 "speed": 5.0
 }, {
 "frames": [{
@@ -72,24 +89,35 @@ animations = [{
 "name": &"up",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbg0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbsqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2lu3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_regva")
+}],
 "loop": true,
 "name": &"w",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7wx2"]
-size = Vector2(227, 408)
+size = Vector2(159.5, 293.375)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_xsm63")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(281.5, 361.25)
-scale = Vector2(0.7734375, 0.7262896)
+position = Vector2(349.88477, 421.04285)
+scale = Vector2(0.5487344, 0.5382264)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"w"
-frame_progress = 0.7343811
+animation = &"down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(200, 187)
@@ -101,5 +129,5 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(301.5, 362)
+position = Vector2(347.75, 419.6875)
 shape = SubResource("RectangleShape2D_m7wx2")

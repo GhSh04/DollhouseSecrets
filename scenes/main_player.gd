@@ -5,7 +5,17 @@ const SPEED = 300.0
 func _physics_process(delta: float) -> void:
 	# الحصول على مدخلات الحركة
 	var direction_x := Input.get_axis("left", "right")
+	if direction_x == 1:
+		get_node("AnimatedSprite2D").flip_h = true
+	elif direction_x == -1:
+		get_node("AnimatedSprite2D").flip_h = false
+	
+	
 	var direction_y := Input.get_axis("up", "down")
+	if direction_y == 1:
+		get_node("AnimatedSprite2D").flip_h = true
+	elif direction_y == -1:
+		get_node("AnimatedSprite2D").flip_h = false
 	
 	var input_vector = Vector2(direction_x, direction_y).normalized()
 	
@@ -19,7 +29,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("up") # استخدام أنميشن "up"
 	elif input_vector.y > 0:
 		# إذا كان يتحرك للأسفل
-		$AnimatedSprite2D.play("d") # (إذا كان لديك أنميشن للأسفل)
+		$AnimatedSprite2D.play("down") # (إذا كان لديك أنميشن للأسفل)
 	elif input_vector.x != 0:
 		# إذا كان يتحرك أفقياً (يمين/يسار)
 		$AnimatedSprite2D.play("w") # (أو "w" كما كان في الكود الأصلي)

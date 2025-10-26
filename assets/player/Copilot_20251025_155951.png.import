@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpc2pd4qi1ql7"
-path="res://.godot/imported/WhatsApp Image 2025-10-25 at 5.57.09 PM.png-88ec0f78e52917676fc77abee439eecb.ctex"
+uid="uid://dc2prd5d57i42"
+path="res://.godot/imported/Copilot_20251025_155951.png-22a1ef9fd3fe78a9b0eebe81fc600bb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/WhatsApp Image 2025-10-25 at 5.57.09 PM.png"
-dest_files=["res://.godot/imported/WhatsApp Image 2025-10-25 at 5.57.09 PM.png-88ec0f78e52917676fc77abee439eecb.ctex"]
+source_file="res://assets/player/Copilot_20251025_155951.png"
+dest_files=["res://.godot/imported/Copilot_20251025_155951.png-22a1ef9fd3fe78a9b0eebe81fc600bb8.ctex"]
 
 [params]
 
