@@ -12,9 +12,10 @@ func _pressed():
 
 	if entered == correct_password:
 		drawer_closed.visible = false
+		
 		drawer_opened.visible = true
 		password_input.visible = false
 		self.visible = false  # يخفي الزر نفسه
-		message_label.text = "✅ تم فتح الدرج!"
+		message_label.text = "The drawer has been opened!"
 	else:
-		message_label.text = "❌ الرقم السري غير صحيح"
+		message_label.text = "The PIN is incorrect"

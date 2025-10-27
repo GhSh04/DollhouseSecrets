@@ -42,3 +42,5 @@ func _physics_process(delta: float) -> void:
 		
 	# تنفيذ الحركة
 	move_and_slide()
+func collect(item):
+	inv.insert(item)

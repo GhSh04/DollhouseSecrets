@@ -110,14 +110,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7wx2"]
-size = Vector2(159.5, 293.375)
+size = Vector2(125.8333, 226.66669)
 
 [node name="player" type="CharacterBody2D"]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_xsm63")
 inv = ExtResource("2_j87hv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(349.88477, 421.04285)
+position = Vector2(331.66666, 338.3333)
 scale = Vector2(0.6, 0.588)
 sprite_frames = SubResource("SpriteFrames_fjrip")
 animation = &"down"
@@ -132,7 +133,11 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(347.75, 419.6875)
+position = Vector2(327.91666, 379.16666)
 shape = SubResource("RectangleShape2D_m7wx2")
 
 [node name="Inv_UI" parent="." instance=ExtResource("6_yrxe1")]
+offset_left = 395.8333
+offset_top = 375.8333
+offset_right = 609.1666
+offset_bottom = 452.5
