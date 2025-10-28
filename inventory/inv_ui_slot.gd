@@ -1,10 +1,10 @@
 extends Panel
 
-@onready var item_visual: Sprite2D=$item_display
+@onready var item_display = $item_display
 
-func updat(item:InvItem):
-	if !item:
-		item_visual.visible=false
-	else :
-		item_visual.visible=true
-		item_visual.texture=item.texture
+func update(item: InventoryItem):   
+	item_display.texture = item.texture
+	# أو Node2D إذا كان المشهد من نوع Node2D
+
+
+ 

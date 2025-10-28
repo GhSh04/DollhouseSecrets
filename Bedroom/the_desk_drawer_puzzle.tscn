@@ -1,16 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://cttit1h51v32r"]
+[gd_scene load_steps=17 format=3 uid="uid://cttit1h51v32r"]
 
 [ext_resource type="Texture2D" uid="uid://e1ncpdkaigbu" path="res://Bedroom/Copilot_20251025_121113.png" id="1_34ces"]
 [ext_resource type="Texture2D" uid="uid://qqgp1s24sl40" path="res://Bedroom/download (1).jpg" id="2_7ds4j"]
 [ext_resource type="Texture2D" uid="uid://dbtw0g8sjm37q" path="res://Bedroom/Copilot_20251025_120036.png" id="2_a2m67"]
 [ext_resource type="FontFile" uid="uid://b4tr5xqnbv6pp" path="res://assets/February Strawberry Freebie/Pixel MIM Strawberry.ttf" id="3_hxffn"]
+[ext_resource type="PackedScene" uid="uid://dylqylr20mblw" path="res://inventory/keyy.tscn" id="3_qjf2y"]
 [ext_resource type="Texture2D" uid="uid://tsremoqiaukf" path="res://Bedroom/ui_basic_color.png" id="4_7ds4j"]
-[ext_resource type="Script" uid="uid://bwypjexpi0xl1" path="res://inventory/items/key_1.gd" id="4_qr80s"]
 [ext_resource type="Texture2D" uid="uid://p3xpr4xiyfbh" path="res://assets/gold_button_normal.png" id="5_o30rg"]
 [ext_resource type="Texture2D" uid="uid://cuocdaiebm78w" path="res://Bedroom/Inside_C.png" id="8_o30rg"]
 [ext_resource type="Script" uid="uid://b6qbp0usmfydl" path="res://Bedroom/desk2.gd" id="9_o30rg"]
 [ext_resource type="Script" uid="uid://dgspu2s76r50b" path="res://Bedroom/submit_button.gd" id="9_qjf2y"]
-[ext_resource type="Texture2D" uid="uid://ihbupxajd4pd" path="res://assets/WhatsApp Image 2025-10-24 at 2.36.03 PM (2).png" id="10_qr80s"]
 
 [sub_resource type="FontVariation" id="FontVariation_qjf2y"]
 base_font = ExtResource("3_hxffn")
@@ -48,11 +47,8 @@ position = Vector2(48, 15)
 scale = Vector2(0.7434896, 0.6367187)
 texture = ExtResource("1_34ces")
 
-[node name="key_1" type="Sprite2D" parent="Node2D"]
-position = Vector2(62, -63)
-scale = Vector2(0.9194337, 0.9041748)
-texture = ExtResource("10_qr80s")
-script = ExtResource("4_qr80s")
+[node name="keyy" parent="Node2D" instance=ExtResource("3_qjf2y")]
+position = Vector2(-92, 88)
 
 [node name="DrawerClosed" type="Sprite2D" parent="Node2D"]
 position = Vector2(46, 16.000061)
