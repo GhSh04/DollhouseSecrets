@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://lwfn18enrsb6"]
+
+[ext_resource type="Script" uid="uid://dt1v1t3b3qfmv" path="res://start/intro_scene.gd" id="1_hfg22"]
+
+[node name="IntroScene" type="Node2D"]
+script = ExtResource("1_hfg22")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 5.0652795
+scale = Vector2(28.842815, 128.52203)

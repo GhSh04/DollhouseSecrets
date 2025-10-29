@@ -1,11 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://fpk4mg5ryf46"]
+[gd_scene load_steps=19 format=3 uid="uid://fpk4mg5ryf46"]
 
 [ext_resource type="Script" uid="uid://vmxonud0xlep" path="res://scenes/main_player.gd" id="1_xsm63"]
-[ext_resource type="Resource" uid="uid://bkejl277cbon7" path="res://inventory/playerinv.tres" id="2_j87hv"]
-[ext_resource type="Texture2D" uid="uid://dc2prd5d57i42" path="res://assets/player/Copilot_20251025_155951.png" id="2_ydk1y"]
+[ext_resource type="Texture2D" uid="uid://bsjmxl6grmi8p" path="res://assets/Copilot_20251029_065108 (1).png" id="3_j87hv"]
 [ext_resource type="Texture2D" uid="uid://b0boij1iackx2" path="res://assets/player/IMG_7452.png" id="3_oq4ni"]
 [ext_resource type="Texture2D" uid="uid://b4fwco7c3hv6x" path="res://assets/player/IMG_7454.png" id="3_vyh2l"]
-[ext_resource type="PackedScene" uid="uid://blw1gq653yk4a" path="res://inventory/inv_ui.tscn" id="6_yrxe1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oq4ni"]
 atlas = ExtResource("3_vyh2l")
@@ -24,20 +22,20 @@ atlas = ExtResource("3_vyh2l")
 region = Rect2(0, 0, 292, 617)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vyh2l"]
-atlas = ExtResource("2_ydk1y")
-region = Rect2(0, 0, 256, 500)
+atlas = ExtResource("3_j87hv")
+region = Rect2(0, 0, 380, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j87hv"]
-atlas = ExtResource("2_ydk1y")
-region = Rect2(256, 0, 256, 500)
+atlas = ExtResource("3_j87hv")
+region = Rect2(380, 0, 380, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yrxe1"]
-atlas = ExtResource("2_ydk1y")
-region = Rect2(512, 0, 256, 500)
+atlas = ExtResource("3_j87hv")
+region = Rect2(760, 0, 380, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5m47q"]
-atlas = ExtResource("2_ydk1y")
-region = Rect2(768, 0, 256, 500)
+atlas = ExtResource("3_j87hv")
+region = Rect2(1140, 0, 380, 1024)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbg0t"]
 atlas = ExtResource("3_oq4ni")
@@ -115,13 +113,13 @@ size = Vector2(125.8333, 226.66669)
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(1.2, 1.2)
 script = ExtResource("1_xsm63")
-inv = ExtResource("2_j87hv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(331.66666, 338.3333)
-scale = Vector2(0.6, 0.588)
+position = Vector2(331.66666, 347.39996)
+scale = Vector2(0.6, 0.573)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"down"
+animation = &"up"
+frame_progress = 0.37203082
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(218, 282)
@@ -133,11 +131,5 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(327.91666, 379.16666)
+position = Vector2(334.16666, 425.8333)
 shape = SubResource("RectangleShape2D_m7wx2")
-
-[node name="Inv_UI" parent="." instance=ExtResource("6_yrxe1")]
-offset_left = 395.8333
-offset_top = 375.8333
-offset_right = 609.1666
-offset_bottom = 452.5

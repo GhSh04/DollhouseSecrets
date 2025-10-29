@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c88lavhutdnnr"]
+[gd_scene load_steps=18 format=3 uid="uid://c88lavhutdnnr"]
 
 [ext_resource type="Texture2D" uid="uid://dr6uvo06unifx" path="res://assets/Bedroom.png" id="1_ljr60"]
 [ext_resource type="Texture2D" uid="uid://qqgp1s24sl40" path="res://Bedroom/download (1).jpg" id="1_lmjfq"]
@@ -34,6 +34,10 @@ height = 324.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qmbqv"]
 size = Vector2(268, 138)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kdynj"]
+a = Vector2(2151, 546)
+b = Vector2(10, 640)
+
 [node name="Bedroom" type="Node2D"]
 
 [node name="Download(1)" type="Sprite2D" parent="."]
@@ -58,7 +62,7 @@ scale = Vector2(4.615233, 3.307801)
 texture = ExtResource("2_t561b")
 
 [node name="InsideC3" type="Sprite2D" parent="."]
-position = Vector2(-81.86558, 649.8296)
+position = Vector2(-91, 644.00006)
 rotation = -1.5676023
 scale = Vector2(4.5652146, 3.6139145)
 texture = ExtResource("2_t561b")
@@ -134,8 +138,14 @@ shape = SubResource("CapsuleShape2D_dihus")
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2(1883, 853)
+position = Vector2(1882, 853)
 shape = SubResource("RectangleShape2D_qmbqv")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(-22, 13)
+shape = SubResource("SegmentShape2D_kdynj")
 
 [connection signal="input_event" from="b" to="b" method="_on_input_event"]
 [connection signal="input_event" from="c" to="c" method="_on_input_event"]

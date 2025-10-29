@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-@export var inv:Inv
+
 func _physics_process(delta: float) -> void:
 	# الحصول على مدخلات الحركة
 	var direction_x := Input.get_axis("left", "right")
@@ -42,5 +42,3 @@ func _physics_process(delta: float) -> void:
 		
 	# تنفيذ الحركة
 	move_and_slide()
-func collect(item):
-	inv.insert(item)
