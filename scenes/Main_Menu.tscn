@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://pvgknhmimmpj"]
+[gd_scene load_steps=19 format=3 uid="uid://pvgknhmimmpj"]
 
 [ext_resource type="Texture2D" uid="uid://fvxo7r50lyy" path="res://assets/UI assets pack 2/UI books & more.png" id="1_jfien"]
 [ext_resource type="Script" uid="uid://bkbdbe88cvcwu" path="res://scenes/main_menu.gd" id="1_yb5uv"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://di3tbw4ujvds8" path="res://assets/UI assets pack 2/C2013.png" id="4_7260r"]
 [ext_resource type="Texture2D" uid="uid://bpfsqboy5pghs" path="res://assets/UI assets pack 2/C2011.png" id="5_l3124"]
 [ext_resource type="Texture2D" uid="uid://c730iqfk8t1xh" path="res://assets/UI assets pack 2/background_4.png" id="6_ecnfn"]
-[ext_resource type="Script" uid="uid://ukjpm6jd6xg7" path="res://scenes/main_buttons.gd" id="7_v0qjw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8c6n"]
 texture = ExtResource("2_5d5v2")
@@ -123,7 +122,6 @@ offset_bottom = -4.9680176
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 6
-script = ExtResource("7_v0qjw")
 
 [node name="Button2" type="Button" parent="MainButtons"]
 layout_mode = 2

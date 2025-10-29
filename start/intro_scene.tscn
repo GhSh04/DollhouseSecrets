@@ -1,11 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://lwfn18enrsb6"]
+[gd_scene load_steps=3 format=3 uid="uid://lwfn18enrsb6"]
 
-[ext_resource type="Script" uid="uid://dt1v1t3b3qfmv" path="res://start/intro_scene.gd" id="1_hfg22"]
+[ext_resource type="Script" uid="uid://dt1v1t3b3qfmv" path="res://start/intro_scene.gd" id="1_p0gry"]
+[ext_resource type="VideoStream" uid="uid://ddrmhre1jg88b" path="res://start/start.ogv" id="2_p0gry"]
 
 [node name="IntroScene" type="Node2D"]
-script = ExtResource("1_hfg22")
+script = ExtResource("1_p0gry")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_right = 40.0
-offset_bottom = 5.0652795
-scale = Vector2(28.842815, 128.52203)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 1.0
+offset_right = 640.0
+offset_bottom = 385.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8, 1.7)
+stream = ExtResource("2_p0gry")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(472, 219)
+limit_left = 2
+limit_top = -1
+limit_right = 7035
+limit_bottom = 1712
